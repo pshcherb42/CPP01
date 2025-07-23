@@ -1,16 +1,16 @@
-NAME = sed
+NAME = harl
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS = 	main.cpp \
-		sed.cpp \
+		Harl.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS) Makefile sed.hpp
+$(NAME): $(OBJS) Makefile Harl.hpp
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 %.o: %.cpp 
